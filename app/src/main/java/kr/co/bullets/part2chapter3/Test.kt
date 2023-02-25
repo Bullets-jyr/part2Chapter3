@@ -29,10 +29,12 @@ fun main() {
             // Log.e("SERVER", "READ DATA $input")
             println("READ DATA $input")
 
+            // HEADER
             printer.println("HTTP/1.1 200 OK")
             printer.println("Content-Type: text/html\r\n")
 
-            printer.println("<h1>Hello World</h1>")
+            // BODY
+            printer.println("{\"message\": \"Hello World\"}")
             printer.println("\r\n")
             printer.flush()
             printer.close()
